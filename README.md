@@ -1,21 +1,21 @@
 # LeetCode
-LeetCode解题之路
+LeetCode Solutions Summary
 
 [![Travis](https://img.shields.io/badge/language-C++-green.svg)]()
 
->   统计数据的时间是从 2019-09-21 22:21 起至今
+>   From 2019-09-21 22:21 to the present
 
 ---
 
 ![leetcode.jpeg](./pictures/leetcode.jpeg)
 
-## 说明
+## Introduction
 
-LeetCode解题思路，包括数据结构和算法总结，时间空间复杂度分析。其中部分题目因为是之前完成的，没有解题思路只有源码
+LeetCode solutions, including different solutions to the same problem, data structure and algorithm analysis.
 
-[题解](./problems)
+[Solutions](./problems)
 
-[源码](./code)
+[Source Code](./code)
 
 
 
