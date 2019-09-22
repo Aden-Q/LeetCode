@@ -1,5 +1,5 @@
 // Perfect Squares
-// BFS implementation with Queuei
+// BFS implementation with Queue
 // 33.13% time and 3.31% space beats...
 // sadness...
 
