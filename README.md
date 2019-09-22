@@ -31,7 +31,7 @@ My personal website is: https://aden-q.github.io/.
 
 ## Issue
 
-Please contact me with any issue via email:
+Please contact me for any issue via email:
 
 <a href="mailto:qian0102@umn.edu">qian0102@umn.edu 
 
