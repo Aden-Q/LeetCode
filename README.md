@@ -39,4 +39,4 @@ Please contact me for any issue via email:
 
 ## License
 
-[MIT](./LICENSE.txt)
+[MIT](./LICENSE)
