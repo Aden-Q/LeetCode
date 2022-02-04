@@ -4,87 +4,76 @@ import math
 
 # Add any helper functions you may need here
 
+def encrptUtils(s):
+  # base case
+  if len(s) <= 1:
+    return s
+  
+  cur_s = ""
+  if len(s) % 2 == 0:
+    idx = (len(s) - 1) // 2
+  else:
+    idx = len(s) // 2
+  
+  return s[idx] + encrptUtils(s[0:idx]) + encrptUtils(s[idx+1:])
+  
 
-def getMilestoneDays(revenues, milestones):
+
+def findEncryptedWord(s):
   # Write your code here
-  N = len(revenues)
-  K = len(milestones)
-  ans = [-1] * K
-  revenues_aggregate = []
-  # one edge case
-  if N == 0:
-    return ans
   
-  revenues_aggregate.append(revenues[0])
-  for i in range(1, N):
-    revenues_aggregate.append(revenues_aggregate[-1] + revenues[i])
+  return encrptUtils(s)
   
-  for i in range(K):
-    idx = 0
-    while revenues_aggregate[idx] < milestones[i] and idx < N:
-      idx += 1
-    if idx < N:
-      ans[i] = idx + 1
-    
-  return ans
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
+
+
+
+
+
+
+
+
+
+
 
 # These are the tests we use to determine if the solution is correct.
 # You can add your own at the bottom.
 
-def printIntegerList(array):
-  size = len(array)
-  print('[', end='')
-  for i in range(size):
-    if i != 0:
-      print(', ', end='')
-    print(array[i], end='')
-  print(']', end='')
+def printString(string):
+  print('[\"', string, '\"]', sep='', end='')
 
 test_case_number = 1
 
 def check(expected, output):
   global test_case_number
-  expected_size = len(expected)
-  output_size = len(output)
-  result = True
-  if expected_size != output_size:
-    result = False
-  for i in range(min(expected_size, output_size)):
-    result &= (output[i] == expected[i])
+  result = False
+  if expected == output:
+    result = True
   rightTick = '\u2713'
   wrongTick = '\u2717'
   if result:
     print(rightTick, 'Test #', test_case_number, sep='')
   else:
     print(wrongTick, 'Test #', test_case_number, ': Expected ', sep='', end='')
-    printIntegerList(expected)
+    printString(expected)
     print(' Your output: ', end='')
-    printIntegerList(output)
+    printString(output)
     print()
   test_case_number += 1
 
 if __name__ == "__main__":
-  revenues_1 = [100, 200, 300, 400, 500]
-  milestones_1 = [300, 800, 1000, 1400]
-  expected_1 = [2, 4, 4, 5]
-  output_1 = getMilestoneDays(revenues_1, milestones_1)
+  s1 = "abc"
+  expected_1 = "bac"
+  output_1 = findEncryptedWord(s1)
   check(expected_1, output_1)
 
-  revenues_2 = [700, 800, 600, 400, 600, 700]
-  milestones_2 = [3100, 2200, 800, 2100, 1000] 
-  expected_2 = [5, 4, 2, 3, 2]
-  output_2 = getMilestoneDays(revenues_2, milestones_2)
+  s2 = "abcd"
+  expected_2 = "bacd"
+  output_2 = findEncryptedWord(s2)
   check(expected_2, output_2)
 
   # Add your own test cases here
+  s3 = "a"
+  expected_3 = "a"
+  output_3 = findEncryptedWord(s3)
+  check(expected_3, output_3)
   
