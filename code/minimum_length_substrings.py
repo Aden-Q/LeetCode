@@ -48,7 +48,6 @@ def min_length_substring(s, t):
     # next narrow down the lptr
     while (str_contains(s[lptr:rptr], t)):
       lptr += 1
-    print(lptr, " ", rptr)
     if rptr - lptr + 1 < ans:
       ans = rptr - lptr + 1
   
