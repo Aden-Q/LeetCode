@@ -16,6 +16,6 @@
 
 ## Problem List
 
-| *?y | Title    | Tag | Notes | Company |
-| --- | -------- | --- | ----- | ------- |
-|     | 15. 3Sum |     |       |         |
+| *?y | Title    | Tag                    | Notes                | Company |
+| --- | -------- | ---------------------- | -------------------- | ------- |
+| ?   | 15. 3Sum | Array, Double Pointers | Eliminate redundancy |         |
