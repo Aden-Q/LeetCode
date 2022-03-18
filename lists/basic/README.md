@@ -16,6 +16,7 @@
 
 ## Problem List
 
-| *?y | Title    | Tag                    | Notes                | Company |
-| --- | -------- | ---------------------- | -------------------- | ------- |
-| ?   | 15. 3Sum | Array, Double Pointers | Eliminate redundancy |         |
+| *?y | Title                       | Tag                    | Notes                | Company |
+| --- | --------------------------- | ---------------------- | -------------------- | ------- |
+| ?   | 15. 3Sum                    | Array, Double Pointers | Eliminate redundancy |         |
+| y   | 8. String to Integer (atoi) | Edge cases             |                      |         |
