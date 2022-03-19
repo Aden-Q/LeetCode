@@ -26,7 +26,7 @@
 | y   | 19.Remove Nth Node From End of List      | Linked List            | Elementary linked list problem                                       |         |
 | *   | 31.Next Permutation                      | Permutation            |                                                                      |         |
 | y   | 33.Search in Rotated Sorted Array        | Binary Search          | Consider edge cases carefully                                        |         |
-|     |                                          |                        |                                                                      |         |
+| ？  | 39.Combination Sum                       | Recursion              | Python list.extend modifies in place and return None!                |         |
 |     |                                          |                        |                                                                      |         |
 |     |                                          |                        |                                                                      |         |
 |     |                                          |                        |                                                                      |         |
