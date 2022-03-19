@@ -17,17 +17,15 @@ LeetCode solutions, including different solutions to the same problem, data stru
 
 [Source Code](./code)
 
-
-
 ## About me
 
-An undergraduate student in the University of Minnesota, majoring in *Computer Science*, minoring in *Mathematics && Statistics*.
+An undergraduate && Grtaduate student at the University of Minnesota, majoring in *Computer Science*, and *Mathematics*.
+
+Currently I lose my lose to machematics, and I'll pick it up after I get a job offer.
 
 My personal website is: https://aden-q.github.io/.
 
  I usaually share some notes on my website (maybe will share my personal life in the future).
-
-
 
 ## Issue
 
