@@ -27,7 +27,7 @@
 | *   | 31.Next Permutation                      | Permutation            |                                                                      |         |
 | y   | 33.Search in Rotated Sorted Array        | Binary Search          | Consider edge cases carefully                                        |         |
 | ？  | 39.Combination Sum                       | Recursion              | Python list.extend modifies in place and return None!                |         |
-|     |                                          |                        |                                                                      |         |
+| y   | 77.Combinations                          | Backtracking           |                                                                      |         |
 |     |                                          |                        |                                                                      |         |
 |     |                                          |                        |                                                                      |         |
 |     |                                          |                        |                                                                      |         |
