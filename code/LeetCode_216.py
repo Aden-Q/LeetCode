@@ -1,19 +1,20 @@
 class Solution:
     def combinationSum3(self, k: int, n: int) -> List[List[int]]:
         path = []  # a single path
-        res = []  # store final solution
+        res = []  # store paths
         def backtracking(n, start):
-            # get a solution
+            # check whether a solution is reached
             if len(path) == k and n == 0:
                 res.append(path[:])
                 return
-            elif n < 0:
+            # pruning
+            elif n < 0 or len(path) == k:
                 return
-            # process a single node and run backtracking
+            # process a single
             for i in range(start, 10):
                 path.append(i)
                 backtracking(n-i, i+1)
-                path.pop()  # revert
+                path.pop()  # revert to the original state
         # invoke
         backtracking(n, 1)
         
