@@ -16,18 +16,18 @@
 
 ## Problem List
 
-| *?y | Title                                    | Tag                    | Notes                                      | Company |
-| --- | ---------------------------------------- | ---------------------- | ------------------------------------------ | ------- |
-| ?   | 15. 3Sum                                 | Array, Double Pointers | Eliminate redundancy                       |         |
-| y   | 8. String to Integer (atoi)              | Edge cases             | Not worthy                                 |         |
-| y   | 12. Integer to Roman                     | Easy                   | Not worthy                                 |         |
-| y   | 17.Letter Combinations of a Phone Number | Divide and Conquer     | Pay attention to the fact that some digit  |         |
-|     |                                          |                        |                                            |         |
-|     |                                          |                        |                                            |         |
-|     |                                          |                        |                                            |         |
-|     |                                          |                        |                                            |         |
-|     |                                          |                        |                                            |         |
-|     |                                          |                        |                                            |         |
-|     |                                          |                        |                                            |         |
-|     |                                          |                        |                                            |         |
-|     |                                          |                        |                                            |         |
+| *?y | Title                                    | Tag                    | Notes                                                                | Company |
+| --- | ---------------------------------------- | ---------------------- | -------------------------------------------------------------------- | ------- |
+| ?   | 15. 3Sum                                 | Array, Double Pointers | Eliminate redundancy                                                 |         |
+| y   | 8. String to Integer (atoi)              | Edge cases             | Not worthy                                                           |         |
+| y   | 12. Integer to Roman                     | Easy                   | Not worthy                                                           |         |
+| y   | 17.Letter Combinations of a Phone Number | Divide and Conquer     | Pay attention to the fact that some digit can be map to 4 characters |         |
+| y   | 8.4Sum                                   | Double Pointers        | Eliminate redundacy                                                  |         |
+|     |                                          |                        |                                                                      |         |
+|     |                                          |                        |                                                                      |         |
+|     |                                          |                        |                                                                      |         |
+|     |                                          |                        |                                                                      |         |
+|     |                                          |                        |                                                                      |         |
+|     |                                          |                        |                                                                      |         |
+|     |                                          |                        |                                                                      |         |
+|     |                                          |                        |                                                                      |         |
