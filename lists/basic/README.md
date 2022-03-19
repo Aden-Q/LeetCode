@@ -24,7 +24,7 @@
 | y   | 17.Letter Combinations of a Phone Number | Divide and Conquer     | Pay attention to the fact that some digit can be map to 4 characters |         |
 | y   | 8.4Sum                                   | Double Pointers        | Eliminate redundacy                                                  |         |
 | y   | 19.Remove Nth Node From End of List      | Linked List            | Elementary linked list problem                                       |         |
-|     |                                          |                        |                                                                      |         |
+| *   | 31.Next Permutation                      | Permutation            |                                                                      |         |
 |     |                                          |                        |                                                                      |         |
 |     |                                          |                        |                                                                      |         |
 |     |                                          |                        |                                                                      |         |
