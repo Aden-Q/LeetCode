@@ -32,8 +32,8 @@
 | y   | 40.Combination Sum II                    | Backtracking                    | Pruning                                                              |         |
 | y   | 131.Palindrome Partition                 | Backtracking                    |                                                                      |         |
 | y   | 93.Restore IP Addresses                  | Backtracking                    | Termination condition                                                |         |
-| y   | 78.Subsets                               |                                 |                                                                      |         |
-|     |                                          |                                 |                                                                      |         |
+| y   | 78.Subsets                               | Backtracking                    |                                                                      |         |
+| y   | 90.Subsets II                            | Backtracking                    |                                                                      |         |
 |     |                                          |                                 |                                                                      |         |
 |     |                                          |                                 |                                                                      |         |
 |     |                                          |                                 |                                                                      |         |
