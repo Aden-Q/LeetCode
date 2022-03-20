@@ -34,7 +34,7 @@
 | y   | 93.Restore IP Addresses                  | Backtracking                    | Termination condition                                                |         |
 | y   | 78.Subsets                               | Backtracking                    |                                                                      |         |
 | y   | 90.Subsets II                            | Backtracking                    |                                                                      |         |
-|     |                                          |                                 |                                                                      |         |
+| ?   | 491.Increasing Subsequences              | Backtracking                    | Special pruning techniques which I've never encountered before       |         |
 |     |                                          |                                 |                                                                      |         |
 |     |                                          |                                 |                                                                      |         |
 |     |                                          |                                 |                                                                      |         |
