@@ -29,5 +29,5 @@
 | ？  | 39.Combination Sum                       | Recursion/Backtracking          | Python list.extend modifies in place and return None!                |         |
 | y   | 77.Combinations                          | Backtracking                    |                                                                      |         |
 | y   | 216.Combination Sum II                   | Backtracking                    |                                                                      |         |
-|     |                                          |                                 |                                                                      |         |
+| y   | 40.Combination Sum II                    | Backtracking                    | Pruning                                                              |         |
 |     |                                          |                                 |                                                                      |         |

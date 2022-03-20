@@ -1,0 +1,34 @@
+class Solution:
+    def combinationSum2(self, candidates: List[int], target: int) -> List[List[int]]:
+        path = []
+        res = []
+        candidates.sort()
+        size = len(candidates)
+        if sum(candidates) < target:
+            return []
+        
+        def backtracking(start, cul_sum):
+            nonlocal path
+            nonlocal res
+            nonlocal candidates
+            nonlocal size
+            if cul_sum == target:
+                res.append(path[:])
+                return
+            if start > size - 1 or cul_sum > target:
+                return
+            i = start
+            while i < size:
+                path.append(candidates[i])
+                backtracking(i+1, cul_sum + candidates[i])
+                path.pop()
+                i += 1
+                while i < size and candidates[i] == candidates[i-1]:
+                    i += 1
+
+        backtracking(0, 0)
+        # remove duplicates
+        res_remove_dup = []
+        [res_remove_dup.append(l) for l in res if l not in res_remove_dup]
+        return res_remove_dup
+                
