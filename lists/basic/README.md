@@ -37,8 +37,8 @@
 | ?   | 491.Increasing Subsequences              | Backtracking                    | Special pruning techniques which I've never encountered before       |         |
 | y   | 46.Permutations                          | Backtracking                    |                                                                      |         |
 | y   | 47.Permutations II                       | Backtracking                    | Pruning techniques                                                   |         |
-| ?   | 332.Reconstruct Itinerary                | DFS                             | Sort first does not work                                             |         |
-|     |                                          |                                 |                                                                      |         |
+| ?   | 332.Reconstruct Itinerary                | DFS                             | Pay attention to pruning                                             |         |
+| y   | 51.N-Queens                              | Backtracking                    |                                                                      |         |
 |     |                                          |                                 |                                                                      |         |
 |     |                                          |                                 |                                                                      |         |
 |     |                                          |                                 |                                                                      |         |
