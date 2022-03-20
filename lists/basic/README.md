@@ -30,4 +30,4 @@
 | y   | 77.Combinations                          | Backtracking                    |                                                                      |         |
 | y   | 216.Combination Sum II                   | Backtracking                    |                                                                      |         |
 | y   | 40.Combination Sum II                    | Backtracking                    | Pruning                                                              |         |
-|     |                                          |                                 |                                                                      |         |
+| y   | 131.Palindrome Partition                 | Backtracking                    |                                                                      |         |
