@@ -35,7 +35,7 @@
 | y   | 78.Subsets                               | Backtracking                    |                                                                      |         |
 | y   | 90.Subsets II                            | Backtracking                    |                                                                      |         |
 | ?   | 491.Increasing Subsequences              | Backtracking                    | Special pruning techniques which I've never encountered before       |         |
-|     |                                          |                                 |                                                                      |         |
+| y   | 46.Permutations                          | Backtracking                    |                                                                      |         |
 |     |                                          |                                 |                                                                      |         |
 |     |                                          |                                 |                                                                      |         |
 |     |                                          |                                 |                                                                      |         |
