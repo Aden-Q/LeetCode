@@ -1,0 +1,38 @@
+class Solution:
+    def findItinerary(self, tickets):
+        path = ["JFK"]
+        res = []
+        size = len(tickets)
+        map_dict = {}
+        for i in range(size):
+            if tickets[i][0] not in map_dict.keys():
+                map_dict[tickets[i][0]] = [(tickets[i][1], i)]
+            else:
+                map_dict[tickets[i][0]].append((tickets[i][1], i))
+        for key in map_dict.keys():
+            map_dict[key].sort()
+        # keep track of whether the current ticket is used or not
+        used_depth = [False] * size
+        def backtracking(tickets):
+            nonlocal path, res, size, used_depth
+            if len(path) == size + 1:
+                res.append(path[:])
+                used_depth = [True] * size
+                return True
+            if path[-1] not in map_dict.keys():
+                return False
+            # sort in ascending order and return the index corresponding to
+            # the least lexical order
+            smallest_key = 0
+            smallest_val = 0
+            for val in map_dict[path[-1]]:
+                if not used_depth[val[1]]:
+                    used_depth[val[1]] = True
+                    path.append(val[0])
+                    if backtracking(tickets): return True
+                    path.pop()
+                    used_depth[val[1]] = False
+            return False
+            
+        backtracking(tickets)
+        return res[0]
