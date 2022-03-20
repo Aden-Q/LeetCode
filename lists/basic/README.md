@@ -31,3 +31,17 @@
 | y   | 216.Combination Sum II                   | Backtracking                    |                                                                      |         |
 | y   | 40.Combination Sum II                    | Backtracking                    | Pruning                                                              |         |
 | y   | 131.Palindrome Partition                 | Backtracking                    |                                                                      |         |
+| y   | 93.Restore IP Addresses                  | Backtracking                    |                                                                      |         |
+|     |                                          |                                 |                                                                      |         |
+|     |                                          |                                 |                                                                      |         |
+|     |                                          |                                 |                                                                      |         |
+|     |                                          |                                 |                                                                      |         |
+|     |                                          |                                 |                                                                      |         |
+|     |                                          |                                 |                                                                      |         |
+|     |                                          |                                 |                                                                      |         |
+|     |                                          |                                 |                                                                      |         |
+|     |                                          |                                 |                                                                      |         |
+|     |                                          |                                 |                                                                      |         |
+|     |                                          |                                 |                                                                      |         |
+|     |                                          |                                 |                                                                      |         |
+|     |                                          |                                 |                                                                      |         |
