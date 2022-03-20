@@ -1,0 +1,23 @@
+class Solution:
+    def permuteUnique(self, nums: List[int]) -> List[List[int]]:
+        path = []
+        res = []
+        used_depth = [False] * len(nums)
+        def backtracking(nums):
+            nonlocal path, res
+            if len(path) == len(nums):
+                res.append(path[:])
+                return
+            used_level = []
+            for i in range(len(nums)):
+                if nums[i] in used_level or used_depth[i]:
+                    continue
+                used_depth[i] = True
+                used_level.append(nums[i])
+                path.append(nums[i])
+                backtracking(nums)
+                path.pop()
+                used_depth[i] = False
+                
+        backtracking(nums)
+        return res
