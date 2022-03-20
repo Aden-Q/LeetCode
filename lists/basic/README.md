@@ -39,7 +39,7 @@
 | y   | 47.Permutations II                       | Backtracking                    | Pruning techniques                                                   |         |
 | ?   | 332.Reconstruct Itinerary                | DFS                             | Pay attention to pruning                                             |         |
 | y   | 51.N-Queens                              | Backtracking                    |                                                                      |         |
-|     |                                          |                                 |                                                                      |         |
+| ?   | 37.Sudoku Solver                         | Backtracking DFS                |                                                                      |         |
 |     |                                          |                                 |                                                                      |         |
 |     |                                          |                                 |                                                                      |         |
 |     |                                          |                                 |                                                                      |         |
