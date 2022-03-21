@@ -44,7 +44,7 @@
 | y   | 283.Mobe Zeroes                          | Double Pointers                 |                                                                      |         |
 | y   | 844.Backspace String Compare             | Array                           | O(1) space technique                                                 |         |
 | y   | 977.Squares of a Sorted Array            | Array, Double Pointers          |                                                                      |         |
-|     |                                          |                                 |                                                                      |         |
+| y   | 209.Minimum Size Subarray Sum            | Array, Sliding Window           |                                                                      |         |
 |     |                                          |                                 |                                                                      |         |
 |     |                                          |                                 |                                                                      |         |
 |     |                                          |                                 |                                                                      |         |
