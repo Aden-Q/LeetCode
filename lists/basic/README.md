@@ -47,7 +47,7 @@
 | y   | 209.Minimum Size Subarray Sum            | Array, Sliding Window           |                                                                      |         |
 | ?   | 904.Fruit Into Baskets                   | Array, Sliding Window           |                                                                      |         |
 | y   | 76.Minimum Window Substring              | Array, Sliding Window           |                                                                      |         |
-|     |                                          |                                 |                                                                      |         |
+|     | 59.Spiral Matrix II                      | Array, Simulation               |                                                                      |         |
 |     |                                          |                                 |                                                                      |         |
 |     |                                          |                                 |                                                                      |         |
 |     |                                          |                                 |                                                                      |         |
