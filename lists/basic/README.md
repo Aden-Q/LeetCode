@@ -42,6 +42,6 @@
 | ?   | 37.Sudoku Solver                         | Backtracking DFS                |                                                                      |         |
 | y   | 704.Binary Search                        | Binary Search                   |                                                                      |         |
 | y   | 283.Mobe Zeroes                          | Double Pointers                 |                                                                      |         |
-| y   | 844.Backspace String Compare             | Array                           |                                                                      |         |
+| y   | 844.Backspace String Compare             | Array                           | O(1) space technique                                                 |         |
 |     |                                          |                                 |                                                                      |         |
 |     |                                          |                                 |                                                                      |         |
