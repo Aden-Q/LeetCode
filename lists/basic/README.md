@@ -40,8 +40,8 @@
 | ?   | 332.Reconstruct Itinerary                | DFS                             | Pay attention to pruning                                             |         |
 | y   | 51.N-Queens                              | Backtracking                    |                                                                      |         |
 | ?   | 37.Sudoku Solver                         | Backtracking DFS                |                                                                      |         |
-|     |                                          |                                 |                                                                      |         |
-|     |                                          |                                 |                                                                      |         |
+| y   | 704.Binary Search                        | Binary Search                   |                                                                      |         |
+| y   | 283.Mobe Zeroes                          | Double Pointers                 |                                                                      |         |
 |     |                                          |                                 |                                                                      |         |
 |     |                                          |                                 |                                                                      |         |
 |     |                                          |                                 |                                                                      |         |
