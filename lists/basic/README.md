@@ -46,7 +46,7 @@
 | y   | 977.Squares of a Sorted Array            | Array, Double Pointers          |                                                                      |         |
 | y   | 209.Minimum Size Subarray Sum            | Array, Sliding Window           |                                                                      |         |
 | ?   | 904.Fruit Into Baskets                   | Array, Sliding Window           |                                                                      |         |
-|     |                                          |                                 |                                                                      |         |
+| y   | 76.Minimum Window Substring              | Array, Sliding Window           |                                                                      |         |
 |     |                                          |                                 |                                                                      |         |
 |     |                                          |                                 |                                                                      |         |
 |     |                                          |                                 |                                                                      |         |
