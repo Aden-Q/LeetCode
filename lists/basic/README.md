@@ -53,7 +53,7 @@
 | ?   | 142.Linked List Cycle II                 | Cycle Linked List               |                                                                      |         |
 | y   | 242.Valid Anagram                        | Hash Table                      |                                                                      |         |
 | y   | 383.Ransom Note                          | Hash Table                      |                                                                      |         |
-|     |                                          |                                 |                                                                      |         |
+| y   | 49.Group Anagrams                        | Hash Table                      |                                                                      |         |
 |     |                                          |                                 |                                                                      |         |
 |     |                                          |                                 |                                                                      |         |
 |     |                                          |                                 |                                                                      |         |
