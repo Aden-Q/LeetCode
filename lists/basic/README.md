@@ -50,8 +50,8 @@
 | ?   | 59.Spiral Matrix II                      | Array, Simulation               |                                                                      |         |
 | y   | 203.Remove Linked List Elements          | Linked List                     |                                                                      |         |
 | y   | 707.Design Linked List                   | Linked List                     |                                                                      |         |
-|     |                                          |                                 |                                                                      |         |
-|     |                                          |                                 |                                                                      |         |
+| ?   | 142.Linked List Cycle II                 | Cycle Linked List               |                                                                      |         |
+| y   | 242.Valid Anagram                        | 哈希表                          |                                                                      |         |
 |     |                                          |                                 |                                                                      |         |
 |     |                                          |                                 |                                                                      |         |
 |     |                                          |                                 |                                                                      |         |
