@@ -1,0 +1,20 @@
+class Solution:
+    def findAnagrams(self, s: str, p: str) -> List[int]:        
+        size_s = len(s)
+        size_p = len(p)
+        counter1 = collections.defaultdict(int)
+        counter2 = collections.defaultdict(int)
+        ans = []
+        for c in p:
+            counter2[c] += 1
+        for c in s[:size_p-1]:
+            counter1[c] += 1
+        for i in range(size_p-1, size_s):
+            counter1[s[i]] += 1
+            if i - size_p >= 0:
+                counter1[s[i-size_p]] -= 1
+                if counter1[s[i-size_p]] == 0:
+                    del counter1[s[i-size_p]]
+            if counter1 == counter2:
+                ans.append(i-size_p+1)
+        return ans  
