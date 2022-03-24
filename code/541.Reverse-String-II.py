@@ -1,0 +1,25 @@
+class Solution:
+    def reverseStr(self, s: str, k: int) -> str:
+        def reverse(s_list, start_idx, end_idx):
+            while(start_idx < end_idx):
+                s_list[start_idx], s_list[end_idx] = s_list[end_idx], s_list[start_idx]
+                start_idx += 1
+                end_idx -= 1
+        
+        s = list(s)  # list is mutable
+        size = len(s)
+        start_idx = 0
+        while start_idx < size:
+            # slicing
+            end_idx = start_idx + 2 * k - 1
+            if end_idx > size - 1:
+                # check how many chars are left
+                if size - start_idx < k:
+                    # reverse all
+                    reverse(s, start_idx, size-1)
+                elif size - start_idx < 2 * k:
+                    reverse(s, start_idx, start_idx + k-1)
+            else:
+                reverse(s, start_idx, start_idx + k - 1)
+            start_idx += 2 * k        
+        return "".join(s)
