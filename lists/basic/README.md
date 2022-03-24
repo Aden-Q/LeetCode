@@ -57,4 +57,4 @@
 | y   | 438.Find All Anagrams in a String        | Hash Table                      |                                                                      |         |
 | y   | 454.4Sum II                              | Hash Table                      |                                                                      |         |
 | y   | 541.Reverse String II                    | Double Pointers                 |                                                                      |         |
-|     |                                          |                                 |                                                                      |         |
+| y   | 151.Reverse Words in a String            | Array                           |                                                                      |         |
