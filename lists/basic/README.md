@@ -61,7 +61,7 @@
 | y   | 459.Repeated Substring Pattern           | Array                           | $O(n\log n)$                                                       |         |
 | y   | 232.Implement Queue Using Stacks         | Stack and Queue                 |                                                                      |         |
 | y   | 225.Implement Stack Using Queues         | Stack and Queue                 |                                                                      |         |
-|     | 1047.Remove All Duplicates In String     | Stack                           |                                                                      |         |
-|     |                                          |                                 |                                                                      |         |
+| y   | 1047.Remove All Duplicates In String     | Stack                           |                                                                      |         |
+| ?   | 239.Sliding Window Maximum               | Monotone Queue                  | $O(n)$                                                             |         |
 |     |                                          |                                 |                                                                      |         |
 |     |                                          |                                 |                                                                      |         |
