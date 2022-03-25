@@ -63,5 +63,5 @@
 | y   | 225.Implement Stack Using Queues         | Stack and Queue                 |                                                                      |         |
 | y   | 1047.Remove All Duplicates In String     | Stack                           |                                                                      |         |
 | ?   | 239.Sliding Window Maximum               | Monotone Queue                  | $O(n)$                                                             |         |
-|     |                                          |                                 |                                                                      |         |
+| y   | 347.Top K Frequent Elements              | Priority Queue                  | $O(n\log n)$                                                       |         |
 |     |                                          |                                 |                                                                      |         |
