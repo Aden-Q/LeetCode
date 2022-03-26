@@ -65,7 +65,7 @@
 | ?   | 239.Sliding Window Maximum               | Monotone Queue                  | $O(n)$                                                             |         |
 | y   | 347.Top K Frequent Elements              | Priority Queue                  | $O(n\log n)$                                                       |         |
 | y   | 102.Bianry Tree Level Order Traversal    | Queue                           | $O(n)$                                                             |         |
-|     |                                          |                                 |                                                                      |         |
+| y   | 107.Binary Tree Level Order Traversal    | Queue                           | $O(n)$                                                             |         |
 |     |                                          |                                 |                                                                      |         |
 |     |                                          |                                 |                                                                      |         |
 |     |                                          |                                 |                                                                      |         |
