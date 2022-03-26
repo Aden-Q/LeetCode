@@ -82,4 +82,9 @@
 | y   | 257.Binary Tree Paths                              | Backtracking                    | $O(n)$                                                             |         |
 | y   | 404.Sum of Left Leaves                             | Post Order Traversal            | $O(n)$                                                             |         |
 | y   | 513.Find Bottom Left Tree Values                   | Level Order Traversal           | $O(n)$                                                             |         |
+| y   | 112.Path Sum                                       | Backtracking                    |                                                                      |         |
+| y   | 113.Path Sum II                                    | Backtracking                    |                                                                      |         |
+|     |                                                    |                                 |                                                                      |         |
+|     |                                                    |                                 |                                                                      |         |
+|     |                                                    |                                 |                                                                      |         |
 |     |                                                    |                                 |                                                                      |         |
