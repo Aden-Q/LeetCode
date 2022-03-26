@@ -72,7 +72,7 @@
 | y   | 515.Find Largest Value in Each Row                 | Queue                           | $O(n)$                                                             |         |
 | y   | 116.Populating Next Right Pointers in Each Node    | Queue                           | $O(n)$                                                             |         |
 | y   | 117.Populating Next Right Pointers in Each Node II | Queue                           | $O(n)$                                                             |         |
-|     |                                                    |                                 |                                                                      |         |
+| y   | 111.Minimum Depth of Binary Tree                   | Queue                           | $O(n)$                                                             |         |
 |     |                                                    |                                 |                                                                      |         |
 |     |                                                    |                                 |                                                                      |         |
 |     |                                                    |                                 |                                                                      |         |
