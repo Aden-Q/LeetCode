@@ -77,7 +77,7 @@
 | y   | 100.Same Tree                                      | Preorder Traversal              | $O(n)$                                                             |         |
 | ?   | 572.Subtree of Another Tree                        | Recursion                       | $O(n)$                                                             |         |
 | y   | 559.Maximum Depth of N-ary Tree                    | Level Order Traversal           | $O(n)$                                                             |         |
-|     |                                                    |                                 |                                                                      |         |
+| y   | 222.Count Complete Tree Nodes                      | Level Order Traversal           | $O(n)$                                                             |         |
 |     |                                                    |                                 |                                                                      |         |
 |     |                                                    |                                 |                                                                      |         |
 |     |                                                    |                                 |                                                                      |         |
