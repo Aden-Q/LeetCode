@@ -67,7 +67,7 @@
 | y   | 102.Bianry Tree Level Order Traversal    | Queue                           | $O(n)$                                                             |         |
 | y   | 107.Binary Tree Level Order Traversal    | Queue                           | $O(n)$                                                             |         |
 | y   | 199.Bianry Tree Right Side View          | Queue                           | $O(n)$                                                             |         |
-|     |                                          |                                 |                                                                      |         |
+| y   | 637.Average of Levels in Binary Tree     | Queue                           | $O(n)$                                                             |         |
 |     |                                          |                                 |                                                                      |         |
 |     |                                          |                                 |                                                                      |         |
 |     |                                          |                                 |                                                                      |         |
