@@ -87,4 +87,4 @@
 | y   | 654.Maximum Binary Tree                            | Preorder Traversal              |                                                                      |         |
 | y   | 617.Merge Two Binary Trees                         |                                 |                                                                      |         |
 | y   | 700.Search in a Binary Search Tree                 |                                 |                                                                      |         |
-|     |                                                    |                                 |                                                                      |         |
+| y   | 98.Validate Binary Search Tree                     | Inorder Traversal               | $O(n)$                                                             |         |
