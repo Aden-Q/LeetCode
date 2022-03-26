@@ -69,7 +69,7 @@
 | y   | 199.Bianry Tree Right Side View          | Queue                           | $O(n)$                                                             |         |
 | y   | 637.Average of Levels in Binary Tree     | Queue                           | $O(n)$                                                             |         |
 | y   | 429.N-ary Level Order Traversal          | Queue                           | $O(n)$                                                             |         |
-|     |                                          |                                 |                                                                      |         |
+| y   | 515.Find Largest Value in Each Row       | Queue                           | $O(n)$                                                             |         |
 |     |                                          |                                 |                                                                      |         |
 |     |                                          |                                 |                                                                      |         |
 |     |                                          |                                 |                                                                      |         |
