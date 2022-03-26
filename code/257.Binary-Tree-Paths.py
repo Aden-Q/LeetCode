@@ -1,0 +1,35 @@
+# Definition for a binary tree node.
+# class TreeNode:
+#     def __init__(self, val=0, left=None, right=None):
+#         self.val = val
+#         self.left = left
+#         self.right = right
+class Solution:
+    def binaryTreePaths(self, root: Optional[TreeNode]) -> List[str]:
+        res = []
+        path = []
+        if not root:
+            return res
+        
+        def backtracking(node):
+            nonlocal res, path
+            if node and not node.left and not node.right:
+                # reach a leaf node
+                res.append(path[:])
+                return
+            if node.left:
+                path.append(node.left.val)
+                backtracking(node.left)
+                path.pop()
+            if node.right:
+                path.append(node.right.val)
+                backtracking(node.right)
+                path.pop()
+        
+        backtracking(root)
+        res_convert = []
+        for s in res:
+            s_temp = list(map(str, s))
+            s_temp.insert(0, str(root.val))
+            res_convert.append('->'.join(s_temp))
+        return res_convert

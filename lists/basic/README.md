@@ -78,8 +78,8 @@
 | ?   | 572.Subtree of Another Tree                        | Recursion                       | $O(n)$                                                             |         |
 | y   | 559.Maximum Depth of N-ary Tree                    | Level Order Traversal           | $O(n)$                                                             |         |
 | y   | 222.Count Complete Tree Nodes                      | Level Order Traversal           | $O(n)$                                                             |         |
-| y   | 110.Balanced Binary Tree                           | Recursion                       |                                                                      |         |
-|     |                                                    |                                 |                                                                      |         |
+| y   | 110.Balanced Binary Tree                           | Recursion                       | $O(n)$                                                             |         |
+| y   | 257.Binary Tree Paths                              | Backtracking                    | $O(n)$                                                             |         |
 |     |                                                    |                                 |                                                                      |         |
 |     |                                                    |                                 |                                                                      |         |
 |     |                                                    |                                 |                                                                      |         |
