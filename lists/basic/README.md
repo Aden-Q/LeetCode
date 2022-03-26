@@ -84,7 +84,7 @@
 | y   | 513.Find Bottom Left Tree Values                   | Level Order Traversal           | $O(n)$                                                             |         |
 | y   | 112.Path Sum                                       | Backtracking                    |                                                                      |         |
 | y   | 113.Path Sum II                                    | Backtracking                    |                                                                      |         |
-|     |                                                    |                                 |                                                                      |         |
-|     |                                                    |                                 |                                                                      |         |
-|     |                                                    |                                 |                                                                      |         |
+| y   | 654.Maximum Binary Tree                            | Preorder Traversal              |                                                                      |         |
+| y   | 617.Merge Two Binary Trees                         |                                 |                                                                      |         |
+| y   | 700.Search in a Binary Search Tree                 |                                 |                                                                      |         |
 |     |                                                    |                                 |                                                                      |         |
