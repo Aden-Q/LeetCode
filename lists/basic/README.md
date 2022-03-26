@@ -74,7 +74,7 @@
 | y   | 117.Populating Next Right Pointers in Each Node II | Queue                           | $O(n)$                                                             |         |
 | y   | 111.Minimum Depth of Binary Tree                   | Queue                           | $O(n)$                                                             |         |
 | y   | 226.Invert Binary Tree                             | Recursion, Preorder Traversal   | $O(n)$                                                             |         |
-|     |                                                    |                                 |                                                                      |         |
+| y   | 100.Same Tree                                      | Preorder Traversal              | $O(n)$                                                             |         |
 |     |                                                    |                                 |                                                                      |         |
 |     |                                                    |                                 |                                                                      |         |
 |     |                                                    |                                 |                                                                      |         |
