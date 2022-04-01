@@ -1,0 +1,12 @@
+class Solution:
+    def wiggleMaxLength(self, nums: List[int]) -> int:
+        if len(nums) <= 1:
+            return len(nums)
+        res = 1
+        prev_diff, cur_diff = 0, 0
+        for i in range(len(nums) - 1):
+            cur_diff = nums[i+1] - nums[i]
+            if prev_diff * cur_diff <= 0 and cur_diff != 0:
+                res += 1
+                prev_diff = cur_diff # negate the sign
+        return res
