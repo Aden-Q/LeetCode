@@ -1,0 +1,13 @@
+class Solution:
+    def canPartition(self, nums: List[int]) -> bool:
+        s = sum(nums)
+        if s % 2 == 1:
+            return False
+        dp = [0] * (s // 2 + 1)
+        
+        for i in range(len(nums)):
+            for j in range(s // 2, nums[i] - 1, -1):
+                dp[j] = max(dp[j], dp[j - nums[i]] + nums[i])
+            if dp[s // 2] == s // 2:
+                return True
+        return False
