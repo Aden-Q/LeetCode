@@ -1,0 +1,13 @@
+class Solution:
+    def findTargetSumWays(self, nums: List[int], target: int) -> int:
+        sumNums = sum(nums)
+        if target > sumNums or target < -sumNums:
+            return 0
+        if (target + sumNums) % 2 == 1:
+            return 0
+        dp = [0] * ((target + sumNums) // 2 + 1)
+        dp[0] = 1
+        for i in range(len(nums)):
+            for j in range((target + sumNums) // 2, nums[i] - 1, -1):
+                dp[j] += dp[j - nums[i]]
+        return dp[-1]
