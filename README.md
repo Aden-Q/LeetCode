@@ -7,7 +7,7 @@ LeetCode Solutions
 
 ---
 
-![leetcode.jpeg](./pictures/leetcode.jpeg)
+![](https://raw.githubusercontent.com/Aden-Q/blogImages/main/img/202204212149210.jpeg)
 
 ## Introduction
 
