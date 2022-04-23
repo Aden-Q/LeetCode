@@ -1,0 +1,26 @@
+class Solution:
+    def calDays(self, weights, capacity):
+        left = 0
+        days_total = 0
+        while left < len(weights):
+            cur_capacity = capacity
+            while left < len(weights):
+                if cur_capacity < weights[left]:
+                    break
+                else:
+                    cur_capacity -= weights[left]
+                    left += 1
+            days_total += 1
+        return days_total
+    
+    def shipWithinDays(self, weights: List[int], days: int) -> int:
+        weight_sum = sum(weights)
+        left = max(weights)  # can load the largest item in the list
+        right = weight_sum + 1  # can load in one round
+        while left < right:
+            mid = (left + right) // 2
+            if self.calDays(weights, mid) > days:
+                left = mid + 1
+            else:
+                right = mid
+        return left
