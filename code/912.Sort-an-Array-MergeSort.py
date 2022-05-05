@@ -1,27 +1,3 @@
-# 912. Sort an Array
-
-**Difficulty:** Medium
-
-## URL
-
-https://leetcode.com/problems/sort-an-array/
-
-## Solution
-
-### Approach 1: Built-in Function
-
-The code is shown below:
-
-```python
-class Solution:
-    def sortArray(self, nums: List[int]) -> List[int]:
-        nums.sort()
-        return nums
-```
-
-## Approach 2: MergeSort
-
-```python
 class Solution:
     def sortArray(self, nums: List[int]) -> List[int]:
         def mergeSort(nums, low, high):
@@ -58,5 +34,3 @@ class Solution:
                  
         mergeSort(nums, 0, len(nums) - 1)
         return nums    
-```
-
