@@ -1,0 +1,30 @@
+class Solution:
+    def canFinish(self, numCourses: int, prerequisites: List[List[int]]) -> bool:
+        graph = [[] for _ in range(numCourses)]
+        for edge in prerequisites:
+            graph[edge[1]].append(edge[0])
+        visited = [False] * numCourses
+        on_path = [False] * numCourses
+        has_cycle = False
+        
+        def traverse(node):
+            nonlocal visited, on_path, has_cycle, graph
+            if on_path[node]:
+                has_cycle = True
+                return
+            if visited[node] or has_cycle:
+                return
+            # visited the current node
+            visited[node] = True
+            on_path[node] = True
+            # visited its neighbor
+            for neighbor in graph[node]:
+                traverse(neighbor)
+            # end visiting the current node, remove it from the current DFS path
+            on_path[node] = False
+            return
+        
+        for node in range(numCourses):
+            traverse(node)
+        # if there is no cycle, then you can finish all courses
+        return not has_cycle
