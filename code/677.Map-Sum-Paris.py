@@ -1,0 +1,50 @@
+class TrieNode:
+    def __init__(self):
+        self.val = None
+        self.children = [None] * 26
+
+class MapSum:
+    def __init__(self):
+        self.root = TrieNode()
+        
+    def insert(self, key: str, val: int) -> None:
+        p = self.root
+        for c in key:
+            offset_c = ord(c) - 97
+            if not p.children[offset_c]:
+                p.children[offset_c] = TrieNode()
+            p = p.children[offset_c]
+        # overwrite teh old value
+        p.val = val
+        
+    def getNode(self, key) -> TrieNode:
+        p = self.root
+        for c in key:
+            if not p:
+                return p
+            p = p.children[ord(c) - 97]
+        return p
+    
+    def valuesWithPrefix(self, prefix):
+        res = []
+        path = []
+        node = self.getNode(prefix)
+        self.traverse(node, res)
+        return res
+    
+    def traverse(self, node, res):
+        if not node:
+            return
+        if node.val:
+            res.append(node.val)
+        for child in node.children:
+            self.traverse(child, res)
+        return
+
+    def sum(self, prefix: str) -> int:
+        return sum(self.valuesWithPrefix(prefix))
+
+# Your MapSum object will be instantiated and called as such:
+# obj = MapSum()
+# obj.insert(key,val)
+# param_2 = obj.sum(prefix)
