@@ -1,0 +1,46 @@
+import heapq
+
+class State:
+    def __init__(self, x, y, dist_from_start):
+        self.x = x
+        self.y = y
+        self.dist_from_start = dist_from_start
+    
+    def __lt__(self, other):
+        return self.dist_from_start < other.dist_from_start
+
+class Solution:
+    dirs = [(0, 1), (0, -1), (-1, 0), (1, 0)]
+    def adj(self, heights, x, y):
+        res = []
+        for d in self.dirs:
+            new_x = x + d[0]
+            new_y = y + d[1]
+            if new_x < 0 or new_x >= len(heights) or new_y < 0 or new_y >= len(heights[0]):
+                continue
+            res.append((new_x, new_y))
+        return res
+    
+    def minimumEffortPath(self, heights: List[List[int]]) -> int:
+        row, col = len(heights), len(heights[0])
+        dist = [[float('inf')] * col for _ in range(row)]
+        dist[0][0] = 0
+        pq = [State(0, 0, 0)]
+        
+        while len(pq) != 0:
+            cur = heapq.heappop(pq)
+            x, y, dist_from_start = cur.x, cur.y, cur.dist_from_start
+            if (x, y) == (row-1, col-1):
+                # first time reach the target node
+                return dist_from_start
+            if dist_from_start > dist[x][y]:
+                continue
+            for neighbour in self.adj(heights, x, y):
+                next_x, next_y = neighbour
+                cur_dist = abs(heights[next_x][next_y] - heights[x][y])
+                next_dist = max(cur_dist, dist[x][y])
+                if next_dist < dist[next_x][next_y]:
+                    dist[next_x][next_y] = next_dist
+                    heapq.heappush(pq, State(next_x, next_y, next_dist))
+            
+        return -1
