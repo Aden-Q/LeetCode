@@ -1,7 +1,7 @@
 class TrieNode:
     def __init__(self, val = None):
         self.val = val
-        self.children = [None] * 256
+        self.children = [None] * 26
 
 class Trie:
     def __init__(self):
@@ -13,15 +13,15 @@ class Trie:
         for c in key:
             if not p:
                 return p
-            p = p.children[ord(c)]
+            p = p.children[ord(c) - 97]
         return p
 
     def insert(self, word: str) -> None:
         node = self.root
         for c in word:
-            if not node.children[ord(c)]:
-                node.children[ord(c)] = TrieNode()
-            node = node.children[ord(c)]
+            if not node.children[ord(c) - 97]:
+                node.children[ord(c) - 97] = TrieNode()
+            node = node.children[ord(c) - 97]
         node.val = 1
 
     def search(self, word: str) -> bool:
