@@ -1,35 +1,3 @@
-# 905. Sort Array By Parity
-
-**Difficulty:** Easy
-
-## URL
-
-https://leetcode.com/problems/sort-array-by-parity/
-
-## Solution
-
-### Approach 1:
-
-The code is shown below:
-
-```python
-class Solution:
-    def sortArrayByParity(self, nums: List[int]) -> List[int]:
-        res_even = []
-        res_odd = []
-        for num in nums:
-            if num % 2 == 0:
-                res_even.append(num)
-            else:
-                res_odd.append(num)
-                
-        res_even.extend(res_odd)
-        return res_even
-```
-
-## Approahc 2:
-
-```python
 class Solution:
     def sortArrayByParity(self, nums: List[int]) -> List[int]:
         left, right = 0, len(nums) - 1
@@ -48,5 +16,3 @@ class Solution:
             else:
                 right -= 1   
         return nums
-```
-
