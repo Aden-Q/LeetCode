@@ -1,0 +1,32 @@
+# Definition for a binary tree node.
+# class TreeNode:
+#     def __init__(self, val=0, left=None, right=None):
+#         self.val = val
+#         self.left = left
+#         self.right = right
+from collections import deque
+class State:
+    def __init__(self, node: TreeNode, idx):
+        self.node = node
+        self.idx = idx
+
+class Solution:
+    def widthOfBinaryTree(self, root: Optional[TreeNode]) -> int:
+        max_width = 1
+        q = deque([State(root, 1)])
+        while len(q) != 0:
+            size = len(q)
+            for i in range(size):
+                state = q.popleft()
+                node, idx = state.node, state.idx
+                if i == 0:
+                    left = idx
+                if i == size - 1:
+                    right = idx
+                if node.left:
+                    q.append(State(node.left, idx * 2))
+                if node.right:
+                    q.append(State(node.right, idx * 2 + 1))
+                
+            max_width = max(max_width, right - left + 1)
+        return max_width
