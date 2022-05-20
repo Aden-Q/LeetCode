@@ -1,0 +1,20 @@
+class Solution:
+    def mySqrt(self, x: int) -> int:
+        if x == 0 or x == 1:
+            return x
+        cur_min = x
+        left = 0
+        right = x // 2
+        res = 0
+        while left <= right:
+            mid = (left + right) // 2
+            cur_val = x - mid * mid
+            if cur_val >= 0 and cur_val < cur_min:
+                cur_min = cur_val
+                res = mid
+            elif cur_val < 0:
+                right = mid - 1
+            else:
+                left = mid + 1
+        return res
+                
