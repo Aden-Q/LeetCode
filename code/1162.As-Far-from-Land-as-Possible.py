@@ -1,0 +1,43 @@
+from collections import deque
+
+class Solution:
+    def maxDistance(self, grid: List[List[int]]) -> int:
+        max_dist = -1
+        m = len(grid)
+        n = len(grid[0])
+        summ = 0
+        for i in range(m):
+            for j in range(n):
+                summ += grid[i][j]
+        if summ == 0 or summ == m * n:
+            return -1
+        
+        def bfs():
+            nonlocal grid, m, n
+            dist = -1
+            dq = deque()
+            for i in range(m):
+                for j in range(n):
+                    if grid[i][j] == 1:
+                        dq.append((i, j))
+            while len(dq) != 0:
+                sz = len(dq)
+                dist += 1
+                for _ in range(sz):
+                    cur_x, cur_y = dq.popleft()
+                    grid[cur_x][cur_y] = 2
+                    if cur_x - 1 >= 0 and grid[cur_x-1][cur_y] == 0:
+                        grid[cur_x-1][cur_y] = 2
+                        dq.append((cur_x-1, cur_y))
+                    if cur_x + 1 < m and grid[cur_x+1][cur_y] == 0:
+                        grid[cur_x+1][cur_y] = 2
+                        dq.append((cur_x+1, cur_y))
+                    if cur_y - 1 >= 0 and grid[cur_x][cur_y-1] == 0:
+                        grid[cur_x][cur_y-1] = 2
+                        dq.append((cur_x, cur_y-1))
+                    if cur_y + 1 < n and grid[cur_x][cur_y+1] == 0:
+                        grid[cur_x][cur_y+1] = 2
+                        dq.append((cur_x, cur_y+1))
+            return dist
+        
+        return bfs()
