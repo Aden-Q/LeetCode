@@ -1,0 +1,49 @@
+from collections import deque
+
+class Solution:
+    def shortestBridge(self, grid: List[List[int]]) -> int:
+        n = len(grid)
+        dirs = [[-1, 0], [1, 0], [0, 1], [0, -1]]
+        
+        def dfs(x, y):
+            nonlocal n, grid
+            if grid[x][y] != 1:
+                return
+            grid[x][y] = 2
+            for d in dirs:
+                next_x, next_y = x + d[0], y + d[1]
+                if next_x < 0 or next_x >= n or next_y < 0 or next_y >= n:
+                    continue
+                dfs(next_x, next_y)
+            return
+
+        break_flag = False
+        for i in range(n):
+            if break_flag:
+                break
+            for j in range(n):
+                if grid[i][j] == 1:
+                    dfs(i, j)
+                    break_flag = True
+                    break
+        q = deque()
+        for i in range(n):
+            for j in range(n):
+                if grid[i][j] == 1:
+                    q.append([i, j])
+        count = -1
+        while len(q) != 0:
+            sz = len(q)
+            count += 1
+            for _ in range(sz):
+                cur_x, cur_y = q.popleft()
+                for d in dirs:
+                    next_x, next_y = cur_x + d[0], cur_y + d[1]
+                    if next_x < 0 or next_x >= n or next_y < 0 or next_y >= n:
+                        continue
+                    if grid[next_x][next_y] == 2:
+                        return count
+                    if grid[next_x][next_y] == 0:
+                        grid[next_x][next_y] = 1
+                        q.append([next_x, next_y])
+        return count
