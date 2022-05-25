@@ -1,0 +1,22 @@
+from collections import deque
+
+class Solution:
+    def numOfMinutes(self, n: int, headID: int, manager: List[int], informTime: List[int]) -> int:
+        graph = [[] for _ in range(n)]
+        dist = [0] * n
+        for i in range(n):
+            if manager[i] != -1:
+                graph[manager[i]].append(i)
+        q = deque([headID])
+
+        while len(q) != 0:
+            sz = len(q)
+            max_inform_time = 0
+            for _ in range(sz):
+                curr_node = q.popleft()
+                for node in graph[curr_node]:
+                    dist[node] = dist[curr_node] + informTime[curr_node]
+                    q.append(node)
+
+        return max(dist)
+        
