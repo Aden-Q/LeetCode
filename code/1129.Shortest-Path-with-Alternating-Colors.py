@@ -1,0 +1,35 @@
+from collections import deque
+
+class Solution:
+    def shortestAlternatingPaths(self, n: int, redEdges: List[List[int]], blueEdges: List[List[int]]) -> List[int]:
+        redGraph = [[] for _ in range(n)]
+        blueGraph = [[] for _ in range(n)]
+        for re in redEdges:
+            redGraph[re[0]] .append(re[1])
+        for be in blueEdges:
+            blueGraph[be[0]].append(be[1])
+        
+        # red bfs
+        q = deque()
+        q.append((0, 1))  # start with a red edge
+        q.append((0, -1))  # start with a blue edge
+        res = [float('inf')] * n  # distance from 0
+        res[0] = 0
+        step = 0
+        while len(q) != 0:
+            sz = len(q)
+            step += 1
+            for _ in range(sz):
+                cur_node, cur_color = q.popleft()
+                if cur_color == 1:
+                    for next_node in redGraph[cur_node]:
+                        res[next_node] = min(step, res[next_node])
+                        q.append((next_node, -cur_color))
+                    redGraph[cur_node] = []  # don't visit a single edge twice
+                else:
+                    for next_node in blueGraph[cur_node]:
+                        res[next_node] = min(step, res[next_node])
+                        q.append((next_node, -cur_color))
+                    blueGraph[cur_node] = []
+        res = [i if i != float('inf') else - 1 for i in res]
+        return res
