@@ -1,0 +1,26 @@
+from collections import deque
+from collections import defaultdict
+
+class Solution:
+    def minReorder(self, n: int, connections: List[List[int]]) -> int:
+        q = deque([0])
+        dc = defaultdict(list)
+        edges = [[] for _ in range(n)]
+        for edge in connections:
+            edges[edge[0]].append(edge[1])
+            edges[edge[1]].append(edge[0])
+            dc[edge[0]].append(edge[1])
+        visited = [False] * n
+        visited[0] = True
+        res = 0
+        while len(q) != 0:
+            sz = len(q)
+            for _ in range(sz):
+                cur_node = q.popleft()
+                for next_node in edges[cur_node]:
+                    if not visited[next_node]:
+                        visited[next_node] = True
+                        q.append(next_node)
+                        if next_node in dc[cur_node]:
+                            res += 1
+        return res
