@@ -1,0 +1,33 @@
+from collections import deque
+
+class Solution:
+    def minMutation(self, start: str, end: str, bank: List[str]) -> int:
+        def countDiff(str1, str2):
+            cnt = 0
+            for i in range(len(str1)):
+                if str1[i] != str2[i]:
+                    cnt += 1
+            return cnt
+        
+        bank_dict = {}
+        for idx, val in enumerate(bank):
+            bank_dict[val] = idx
+        bank_dict[start] = len(bank)
+        visited = [False] * (len(bank) + 1)
+        visited[-1] = True
+        if end not in bank_dict:
+            return -1
+        q = deque([start])
+        step = -1
+        while len(q) != 0:
+            sz = len(q)
+            step += 1
+            for _ in range(sz):
+                cur_node = q.popleft()
+                if cur_node == end:
+                    return step
+                for next_node in bank:
+                    if not visited[bank_dict[next_node]] and countDiff(next_node, cur_node) == 1:
+                        visited[bank_dict[next_node]] = True
+                        q.append(next_node)
+        return -1
