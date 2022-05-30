@@ -1,0 +1,18 @@
+class Solution:
+    def trap(self, height: List[int]) -> int:
+        res = 0
+        # build memos
+        max_height_left = [0] * len(height)
+        max_height_left[0] = height[0]
+        for i in range(1, len(height)):
+            max_height_left[i] = max(max_height_left[i-1], height[i])
+        max_height_right = [0] * len(height)
+        max_height_right[0] = height[-1]
+        for i in range(1, len(height)):
+            max_height_right[i] = max(max_height_right[i-1], height[-i-1])
+        
+        for i in range(1, len(height) - 1):
+            l_max = max_height_left[i]
+            r_max = max_height_right[len(height) - i - 1]
+            res += min(l_max, r_max) - height[i]
+        return res
