@@ -1,0 +1,31 @@
+class UF:
+    def __init__(self):
+        self.parent = list(range(26))
+    
+    def find(self, p):
+        if self.parent[p] != p:
+            self.parent[p] = self.find(self.parent[p])
+        return self.parent[p]
+        
+    def union(self, p, q):
+        root_p = self.find(p)
+        root_q = self.find(q)
+        if root_p < root_q:
+            self.parent[root_q] = root_p
+        else:
+            self.parent[root_p] = root_q
+        return
+        
+    def connected(self, p, q):
+        return self.find(p) == self.find(q)
+
+class Solution:
+    def smallestEquivalentString(self, s1: str, s2: str, baseStr: str) -> str:
+        uf = UF()
+        for i in range(len(s1)):
+            uf.union(ord(s1[i]) - ord('a'), ord(s2[i]) - ord('a'))
+        res = []
+        for c in baseStr:
+            res.append(chr(uf.find(ord(c) - ord('a')) + ord('a')))
+        return ''.join(res)
+        
