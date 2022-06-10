@@ -1,0 +1,68 @@
+from collections import defaultdict
+class UF:
+    def __init__(self, n):
+        self.parent = list(range(n))
+        
+    def find(self, p):
+        if p != self.parent[p]:
+            self.parent[p] = self.find(self.parent[p])
+        return self.parent[p]
+    
+    def union(self, p, q):
+        root_p = self.find(p)
+        root_q = self.find(q)
+        self.parent[root_p] = root_q
+        return
+        
+    def connected(self, p, q):
+        return self.find(p) == self.find(q)
+
+class Solution:
+    def generateSentences(self, synonyms: List[List[str]], text: str) -> List[str]:
+        word_id_map = {}
+        id_word_map = {}
+        idx = 0
+        for word in synonyms:
+            if word[0] not in word_id_map:
+                word_id_map[word[0]] = idx
+                id_word_map[idx] = word[0]
+                idx += 1
+            if word[1] not in word_id_map:
+                word_id_map[word[1]] = idx
+                id_word_map[idx] = word[1]
+                idx += 1
+        for word in text.split():
+            if word not in word_id_map:
+                word_id_map[word] = idx
+                id_word_map[idx] = word
+                idx += 1
+        uf = UF(idx)
+        for word in synonyms:
+            op1 = word[0]
+            op2 = word[1]
+            uf.union(word_id_map[op1], word_id_map[op2])
+        syn = defaultdict(list)
+        for idx in range(idx):
+            syn[uf.find(idx)].append(id_word_map[idx])
+        cand = []
+        for word in text.split():
+            cd = syn[uf.find(word_id_map[word])]
+            cd.sort()
+            cand.append(cd)
+        
+        self.path = []
+        self.ans = []
+        self.n = len(cand)
+        def dfs(start):
+            nonlocal cand
+            if start == self.n:
+                self.ans.append(" ".join(self.path))
+                return
+            for word in cand[start]:
+                self.path.append(word)
+                dfs(start + 1)
+                self.path.pop()
+            return
+        
+        dfs(0)
+        return self.ans
