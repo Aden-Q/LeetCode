@@ -1,0 +1,13 @@
+class Solution:
+    def minPathCost(self, grid: List[List[int]], moveCost: List[List[int]]) -> int:
+        m = len(grid)
+        n = len(grid[0])
+        dp = [[float('inf')] * n for _ in range(m)]
+        for j in range(n):
+            dp[0][j] = grid[0][j]
+        for i in range(m - 1):
+            for j in range(n):
+                for k in range(n):
+                    dp[i+1][k] = min(dp[i][j] + grid[i+1][k] + moveCost[grid[i][j]][k], dp[i+1][k])
+        # last row
+        return min(dp[-1])
