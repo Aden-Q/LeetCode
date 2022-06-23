@@ -10,7 +10,6 @@ class Solution:
         res = []
         if not root:
             return res
-        
         q = deque([root])
         while q:
             node = q[-1]  # take the last node on the current level
