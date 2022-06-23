@@ -1,7 +1,6 @@
 class Solution:
     def numIslands(self, grid: List[List[str]]) -> int:
-        m = len(grid)
-        n = len(grid[0])
+        m, n = len(grid), len(grid[0])
         
         def dfs(r, c):
             nonlocal grid, m, n
