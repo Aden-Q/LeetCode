@@ -1,7 +1,6 @@
 class Solution:
     def minSubArrayLen(self, target: int, nums: List[int]) -> int:
-        left = 0
-        right = 0
+        left, right = 0, 0
         cur_sum = nums[0]
         size = len(nums)
         min_length = size + 1
