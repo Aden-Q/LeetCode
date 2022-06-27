@@ -5,7 +5,6 @@ class Solution:
         for edge in prerequisites:
             graph[edge[1]].append(edge[0])
             indegree[edge[0]] += 1
-        
         q = []
         for node in range(numCourses):
             if indegree[node] == 0:
