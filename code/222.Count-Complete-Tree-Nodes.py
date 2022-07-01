@@ -9,7 +9,7 @@ from collections import deque
 class Solution:
     def countNodes(self, root: Optional[TreeNode]) -> int:
         count = 0
-        
+
         if not root:
             return count
         
