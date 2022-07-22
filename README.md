@@ -21,7 +21,7 @@ LeetCode solutions, including different solutions to the same problem, data stru
 
 An undergraduate && Grtaduate student at the University of Minnesota, majoring in *Computer Science*, and *Mathematics*.
 
-Currently I have to give up my lovely machematics, and I'll pick it up after I get a job offer.
+Currently I have to give up my lovely mathematics, and I'll pick it up after I get a job offer.
 
 My personal website is: https://aden-q.github.io/.
 
