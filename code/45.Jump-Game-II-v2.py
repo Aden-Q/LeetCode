@@ -1,13 +1,6 @@
 class Solution:
     def jump(self, nums: List[int]) -> int:
         length = len(nums)
-        # dp[i] represents the minimal number
-        # of steps to jump from the initial position
-        # to position i
-        # The initial value is trival for dp[0]
-        dp = [length + 1] * length
-        dp[0] = 0
-        
         # The current position
         cur = 0
         cnt = 0
@@ -27,5 +20,5 @@ class Solution:
                     cur_val = j + nums[j]
                     next_pos = j
             cur = next_pos
-            
+
         return cnt
