@@ -27,4 +27,5 @@ class Solution:
                     cur_val = j + nums[j]
                     next_pos = j
             cur = next_pos
+            
         return cnt
