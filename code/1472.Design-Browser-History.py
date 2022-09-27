@@ -6,7 +6,9 @@ class BrowserHistory:
     # Doulby linked list allows really fast visit, but slow forward and backward (because we can only move one step at a time)
     # Besides, doubly linked list allows dynamic memory allocation thus better scalability, while array has the drawback of limited capacity
     # Because the memory allocated for array has to be continuous in memory
-
+    # Theoretically this is an efficiently system supporting O(1) time for all operations
+    # The only concern is for increasing the history capacity, which rarely happens, so can be ignored, thus amortized O(1) for all operations
+    
     def __init__(self, homepage: str):
         self.history = [homepage] + [0] * 999
         self.size = 1 # The size of the current browser history
