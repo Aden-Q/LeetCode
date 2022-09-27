@@ -1,7 +1,10 @@
 class Solution:
     def knightDialer(self, n: int) -> int:
+        # 这个递归是空间复杂度最高的，换成bottom-up做空间压缩可以做到O(1) space
         # This is a typically DP problem
         # Given that n is sufficiently large, dfs with timeout for sure
+        # 时间复杂度，loose upper bound是O(3^n)，考虑4这个格点，可以跳到相邻的三个点，但是不是每次都可以跳三个位置，
+        # 至少间隔一次才可以跳三次，所以是losse upper bound。然后 * 10 就行了，big O notation省略系数10
         
         # num is the number we are current at, step is the remaining number of steps we can make
         # The dp result is the total number of phone numbers we can dial based on the current state
