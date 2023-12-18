@@ -1,13 +1,26 @@
+# Definition for a binary tree node.
+# class TreeNode:
+#     def __init__(self, val=0, left=None, right=None):
+#         self.val = val
+#         self.left = left
+#         self.right = right
 class Solution:
-    def isMonotonic(self, nums: List[int]) -> bool:
-        if len(nums) == 1:
-            return True
-        mode = nums[1] - nums[0]
-        for i in range(2, len(nums)):
-            next_mode = nums[i] - nums[i-1]
-            if next_mode * mode < 0:
+    def isValidBST(self, root: Optional[TreeNode]) -> bool:
+        # the sequence of a valid BST must be increasing
+        traverse = []
+
+        def dfs(node) -> bool:
+            nonlocal traverse
+            if not node:
+                return True
+            if not dfs(node.left):
                 return False
-            # find the first non-zero mode
-            if mode == 0:
-                mode = next_mode
-        return True
+            traverse.append(node.val)
+            if len(traverse) > 1 and traverse[-1] <= traverse[-2]:
+                return False
+            if not dfs(node.right):
+                return False
+            
+            return True
+
+        return dfs(root)
