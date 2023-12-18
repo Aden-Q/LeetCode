@@ -17,7 +17,7 @@ class Solution:
         heap = []
 
         node = head
-        # iterate through the input linkedlist and push all into the minheap
+        # iterate over the input linkedlist and push all into the minheap
         while node:
             heapq.heappush(heap, heapNode(node))
             node = node.next
