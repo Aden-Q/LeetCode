@@ -55,7 +55,6 @@ class Solution:
 
         # run dfs from the current position to clean the room
         def dfs(curr_pos, curr_dir):
-            print(curr_pos, curr_dir)
             if curr_pos in visited:
                 return
             # otherwise we clean the current slot
@@ -65,10 +64,8 @@ class Solution:
             # visit all neighbors
             # turn left
             # we can make 1~3 number of turns
-            for turn_cnt in range(4):   
-                robot.turnLeft()
-                next_dir = turn_left[curr_dir]
-                curr_dir = next_dir
+            next_dir = curr_dir
+            for turn_cnt in range(4):
                 # check if we can move in the current direction
                 if robot.move():
                     next_pos = (curr_pos[0] + next_dir[0], curr_pos[1] + next_dir[1])
@@ -76,12 +73,13 @@ class Solution:
                     # backtrack, we need to move back to the original position and restore the direction
                     for _ in range(2):
                         robot.turnRight()
-                        next_dir = turn_right[next_dir]
                     # move back
                     robot.move()
-                    while next_dir != curr_dir:
+                    for _ in range(2):
                         robot.turnRight()
-                        next_dir = turn_right[next_dir]
+
+                robot.turnLeft()
+                next_dir = turn_left[next_dir]
 
             return
 
