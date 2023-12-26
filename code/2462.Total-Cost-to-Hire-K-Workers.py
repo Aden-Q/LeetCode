@@ -11,20 +11,20 @@ class Solution:
             left = n // 2
             right = n // 2 + 1
 
-        left_min_heap = [(costs[idx], idx) for idx in range(left+1)]
+        left_min_heap = [costs[idx] for idx in range(left+1)]
         heapq.heapify(left_min_heap)
-        right_min_heap = [(costs[idx], idx) for idx in range(right, n)]
+        right_min_heap = [costs[idx] for idx in range(right, n)]
         heapq.heapify(right_min_heap)
 
         ans = 0
         for _ in range(k):
-            left_min_val, left_min_idx = math.inf, -1
+            left_min_val = math.inf
             if left_min_heap:
-                left_min_val, left_min_idx = left_min_heap[0]
+                left_min_val = left_min_heap[0]
             
-            right_min_val, right_min_idx = math.inf, -1
+            right_min_val = math.inf
             if right_min_heap:
-                right_min_val, right_min_idx = right_min_heap[0]
+                right_min_val = right_min_heap[0]
 
             if left_min_val <= right_min_val:
                 # pop from the left
@@ -33,7 +33,7 @@ class Solution:
                 if left + 1 < right:
                     left += 1
                     # push
-                    heapq.heappush(left_min_heap, (costs[left], left))
+                    heapq.heappush(left_min_heap, costs[left])
             else:
                 # pop from the left
                 heapq.heappop(right_min_heap)
@@ -41,6 +41,6 @@ class Solution:
                 if right - 1 > left:
                     right -= 1
                     # push
-                    heapq.heappush(right_min_heap, (costs[right], right))
+                    heapq.heappush(right_min_heap, costs[right])
 
         return ans
