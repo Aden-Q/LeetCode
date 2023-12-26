@@ -6,25 +6,19 @@ class Solution:
         # thus we need to make sure n - t <= k inside the window
         left, right = 0, 0
         most_freq = 0
-        most_freq_char = ''
         counter = Counter()
-        res = 0
 
         while right < len(s):
             counter[s[right]] += 1
-            if counter[s[right]] > most_freq:
-                most_freq_char = s[right]
-                most_freq = counter[s[right]]
+            most_freq = max(most_freq, counter[s[right]])
             # contract
             if (right - left + 1) - most_freq > k:
                 counter[s[left]] -= 1
-                # O(26) operation
-                # only find a new most frequency when this number change
-                if s[left] == most_freq_char:
-                    for key, val in counter.items():
-                        if val > most_freq:
-                            most_freq = val
-                            most_freq_char = key
+                # trick here, we don't need to change the frequency
+                # if s[left] is the most frequent character, then some other element s[j] has the same
+                # frequency given the current window, for which we don't need to update most_freq
+                # or counter[s[j]] < counter[s[left]] for all j in [left...right]. We also don't need to
+                # update most_freq in this case
                 left += 1
 
             right += 1
