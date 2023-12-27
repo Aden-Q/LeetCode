@@ -1,22 +1,18 @@
 class Solution:
     def combinationSum3(self, k: int, n: int) -> List[List[int]]:
-        path = []
-        used = [False] * 10
-        res = []
-        def backtracking(cur_sum, k, n, start):
-            if cur_sum > n:
+        self.ans = []
+
+        def dfs(remain, start, path):
+            if remain == 0 and len(path) == k:
+                self.ans.append(path[:])
                 return
-            if k == 0:
-                if cur_sum == n:
-                    res.append(path[:])
+            if remain < 0 or len(path) == k:
                 return
+            
             for i in range(start, 10):
-                if used[i] == False:
-                    path.append(i)
-                    used[i] = True
-                    backtracking(cur_sum + i, k-1, n, i+1)
-                    used[i] = False
-                    path.pop()
-            return
-        backtracking(0, k, n, 1)
-        return res
+                path.append(i)
+                dfs(remain-i, i+1, path)
+                path.pop()
+
+        dfs(n, 1, [])
+        return self.ans
