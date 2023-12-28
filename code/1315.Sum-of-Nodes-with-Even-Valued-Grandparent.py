@@ -6,11 +6,41 @@
 #         self.right = right
 class Solution:
     def sumEvenGrandparent(self, root: TreeNode) -> int:
-        # returns the required sum for a tree rooted at node, given a parent value and a grandparent value
-        def dfs(node, parent, gparent) -> int:
+        self.ans = 0
+
+        # run preorder traversal
+        def dfs(node):
             if not node:
-                return 0
+                return
 
-            return dfs(node.left, node.val, parent) + dfs(node.right, node.val, parent) + (0 if gparent & 1 else node.val)
+            # if the curernt node's value is odd
+            # recursively check its children
+            if node.val & 1:
+                dfs(node.left)
+                dfs(node.right)
+                return
 
-        return dfs(root, -1, -1)
+            # find the current node's grandchildren
+            left_sum = 0
+            if node.left:
+                if node.left.left:
+                    left_sum += node.left.left.val
+                if node.left.right:
+                    left_sum += node.left.right.val
+
+            right_sum = 0
+            if node.right:
+                if node.right.left:
+                    right_sum += node.right.left.val
+                if node.right.right:
+                    right_sum += node.right.right.val
+            
+            self.ans += left_sum + right_sum
+            # here is the trick to trim the tree, when nothing to explore in the subtree
+            if left_sum:
+                dfs(node.left)
+            if right_sum:
+                dfs(node.right)
+
+        dfs(root)
+        return self.ans
