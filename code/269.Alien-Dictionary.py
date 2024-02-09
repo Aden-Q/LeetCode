@@ -7,10 +7,6 @@ class Solution:
         adj = defaultdict(set)
         indegree = defaultdict(int)
         charset = set()
-        edges = set()
-
-        for c in words[0]:
-            charset.add(c)
 
         for word in words:
             for c in word:
@@ -26,7 +22,6 @@ class Solution:
                 if idx < len(prev_word) and idx < len(curr_word) and prev_word[idx] != curr_word[idx]:
                     start, end = prev_word[idx], curr_word[idx]
                     adj[start].add(end)
-                    edges.add((start, end))
                     break
                 if idx == len(curr_word):
                     return ""
@@ -34,8 +29,9 @@ class Solution:
 
         # now we can do topological sort
         indegree = defaultdict(int)
-        for _, end in edges:
-            indegree[end] += 1
+        for c in charset:
+            for next_c in adj[c]:
+                indegree[next_c] += 1
 
         q = deque([])
         for c in charset:
