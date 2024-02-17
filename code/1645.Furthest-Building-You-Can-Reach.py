@@ -3,8 +3,6 @@ class Solution:
         # a max heap to keep track of the cost
         pq = []
 
-
-
         idx = 0
         while idx < len(heights) - 1:
             if heights[idx+1] > heights[idx]:
