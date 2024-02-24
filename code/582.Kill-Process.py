@@ -6,7 +6,7 @@ class TreeNode:
 class Solution:
     def killProcess(self, pid: List[int], ppid: List[int], kill: int) -> List[int]:
         # a map from node ID to its TreeNode
-        node_map = defaultdict(TreeNode)
+        node_map = defaultdict(int)
 
         for p in pid:
             node_map[p] = TreeNode(p)
@@ -16,7 +16,8 @@ class Solution:
             if ppid[i] == 0:
                 # this node has no parent
                 continue
-            node_map[ppid[i]].children.append(node_map[pid[i]])
+            # we just add the id to it
+            node_map[ppid[i]].children.append(pid[i])
 
         # now we run dfs from the node to be killed, impossible to visit the same node twice
         nodes_to_kill = []
@@ -24,8 +25,8 @@ class Solution:
             nonlocal nodes_to_kill
             nodes_to_kill.append(node_id)
             
-            for next_node in node_map[node_id].children:
-                dfs(next_node.val)
+            for next_node_id in node_map[node_id].children:
+                dfs(next_node_id)
 
             return
 
