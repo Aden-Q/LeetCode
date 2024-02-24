@@ -20,11 +20,9 @@ class Solution:
             return url[7:end_idx]
 
         visited = set()
-        res = []
 
         def dfs(url: str, hostname: str) -> None:
             nonlocal visited
-            res.append(url)
             visited.add(url)
 
             for next_url in htmlParser.getUrls(url):
@@ -35,4 +33,4 @@ class Solution:
             return
 
         dfs(startUrl, getHostname(startUrl))
-        return res
+        return list(visited)
