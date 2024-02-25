@@ -11,6 +11,7 @@ class Solution:
             if [row, col] == destination:
                 return True
 
+            # those cells marked as 2 are reachable
             maze[row][col] = 2
             for d in [[-1, 0], [1, 0], [0, -1], [0, 1]]:
                 next_row, next_col = row + d[0], col + d[1]
