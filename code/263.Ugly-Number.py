@@ -4,9 +4,7 @@ class Solution:
             return False
 
         factor = 2
-        while factor * factor <= n:
-            if factor > 5:
-                return False
+        while factor <= 5:
             if n % factor == 0:
                 while n % factor == 0:
                     n = n // factor
