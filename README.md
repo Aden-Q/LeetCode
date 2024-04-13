@@ -12,11 +12,11 @@ https://leetcode.com/Aden-Q/
 
 ## Introduction
 
-LeetCode solutions, data structure and algorithm analysis.
+LeetCode solutions and code
 
-[Solutions](./problems)
+[solutions](./docs)
 
-[Source Code](./code)
+[code](./src)
 
 </a>
 
