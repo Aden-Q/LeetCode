@@ -22,4 +22,4 @@ LeetCode solutions and code
 
 ## License
 
-[MIT](./LICENSE)
+[MIT License](./LICENSE)
